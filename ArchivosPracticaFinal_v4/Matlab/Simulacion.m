@@ -1,3 +1,4 @@
+%% Controlador 1
 sim('Controlador1.slx');
 
 angulo = phi.signals.values(1,:)
@@ -10,5 +11,9 @@ training = [sonar1.signals.values(borrar:end),sonar2.signals.values(borrar:end),
 
 
 save datos_entrenamiento training
+
+%% Controlador 2
+
+sim('Controlador2.slx');
 
 
