@@ -52,7 +52,7 @@ fig = figure('KeyPressFcn',@Key_Down);
   t.FontSize = 14;
 
   training=[];
-
+sim('Controlador1.slx');
 stop = 0;
 while (stop==0)
     pos=odom.LatestMessage.Pose.Pose.Position;

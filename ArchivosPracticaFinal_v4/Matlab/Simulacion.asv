@@ -1,0 +1,11 @@
+sim('Controlador1.slx');
+
+angulo = phi.signals.values(1,:);
+
+borrar = sum(isnan(angulo))
+
+size(angulo)
+
+training = [sonar1.signals.values(borrar:end),sonar2.signals.values,sonar3.signals.values,sonar4.signals.values,x.signals.values,y.signals.values,angulo,w.signals.values,v.signals.values]
+
+
