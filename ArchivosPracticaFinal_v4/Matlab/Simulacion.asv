@@ -1,11 +1,18 @@
+%% Controlador 1
 sim('Controlador1.slx');
 
-angulo = phi.signals.values(1,:);
+angulo = phi.signals.values(1,:)
 
-borrar = sum(isnan(angulo))
+angulo = angulo.';
 
-size(angulo)
 
-training = [sonar1.signals.values(borrar:end),sonar2.signals.values,sonar3.signals.values,sonar4.signals.values,x.signals.values,y.signals.values,angulo,w.signals.values,v.signals.values]
+training = [sonar1.signals.values(borrar:end),sonar2.signals.values(borrar:end),sonar3.signals.values(borrar:end),sonar4.signals.values(borrar:end),x.signals.values(borrar:end),y.signals.values(borrar:end),angulo(borrar:end),w.signals.values(borrar:end),v.signals.values(borrar:end)];
 
+
+save datos_entrenamiento training
+
+%% Controlador 2
+
+sim('Controlador2.slx');
+angular.signals.values
 
